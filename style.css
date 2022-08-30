@@ -1,0 +1,151 @@
+/* EXTERNAL / DESING */
+.colors{
+  /*-----------PRIMARY-----------*/
+  color: hsl(185, 75%, 39%);/*Dark cyan*/
+  color: hsl(229, 23%, 23%);/*Very dark desaturated blue*/
+  color: hsl(227, 10%, 46%);/*Dark grayish blue*/
+  /*-----------NEUTRAL-----------*/
+  color: hsl(0, 0%, 59%);/*Dark gray*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*
+  font-family: 'Kumbh Sans', sans-serif;
+  Weights: 400, 700
+  Font size (name and stats): 18px
+*/
+
+/* OTHERS */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+  transition: all .3s;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background: hsl(185, 75%, 39%);
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url(images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: -200px -390px;
+}
+
+.back-g {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 50vw 50vh;
+}
+
+/* SPECIFY */
+.card {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 350px;
+  height: 375px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: white;
+}
+
+  .card .image {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+  }
+    .card .image img {
+      border-radius: 50%;
+      border: 5px white solid;
+      position: relative;
+      top: 85px;
+    }
+    .card .card-cont p{
+      font-size: 15px;
+      color: hsl(227, 10%, 46%);
+      padding-bottom: 25px;
+    }
+      .card .card-cont p:first-of-type {
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+        padding-bottom: 15px;
+      }
+      .card .card-cont p span {
+        color: hsl(227, 10%, 46%);
+        font-weight: 400;
+      }
+    .card .down {
+      width: 100%;
+      height: 20%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 5%;
+    }
+      .card .down div p {
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .card .down div p span {
+        font-size: 15px;
+        font-weight: 400;
+        color: hsl(0, 0%, 59%);
+      }
+
+
+@media (max-width: 500px) {
+  * {
+    transition: all .3s;
+  }
+  .card {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 325px;
+    height: 375px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+  }
+}
